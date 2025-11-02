@@ -1,0 +1,8 @@
+.container{
+    display: flex;
+  align-items: stretch; 
+  gap: 20px; /* Optional spacing between boxes */
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
