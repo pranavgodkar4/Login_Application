@@ -12,7 +12,7 @@ const AuthSlice = createSlice({
         setAuth:(state,action) => {
             state.isAuthenticated = action.payload.isAuth;
         },
-        fetchUser:(state,action) =>{
+        fetchUser:(state) =>{
             console.log("call fetchUser")
             return{
                 ...state

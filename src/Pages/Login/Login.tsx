@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
 import SignUp from './SignUp';
-import LoginAPI from '../../apis/loginAPI';
 import { useDispatch } from 'react-redux';
 import { fetchUser } from '../../Store/Auth/AuthReducer';
 
@@ -14,7 +12,7 @@ export const Login: React.FC = () => {
   const passRef = useRef<HTMLInputElement | null>(null);
 
   const dispatch = useDispatch();
- 
+  console.log(validation);
 
     const handleSubmit = (event: any) => {
     event.preventDefault();
@@ -46,7 +44,8 @@ export const Login: React.FC = () => {
     console.log(Object.values(userInput).every(val => val !== ""));
     if(Object.values(userInput).every(val => val !== ""))
     {
-      dispatch(fetchUser({url:"/login" , userInput}));
+      const url = '/login'
+      dispatch(fetchUser({url,userInput} as any));
       // const apiD = async () =>{
       //   // const data = await LoginAPI("/login",userInput);
       //   // console.log(data);

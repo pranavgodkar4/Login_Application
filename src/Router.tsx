@@ -5,7 +5,6 @@ import HomePage from "./Pages/Home/HomePage";
 import UserLogin from "./Pages/Login/UserLogin";
 import SignUp from "./Pages/Login/SignUp";
 import DashBoard from "./Pages/Home/DashBoard";
-import Login from "./Pages/Login/Login";
 
  
 export const AppRoute:React.FC = () => {

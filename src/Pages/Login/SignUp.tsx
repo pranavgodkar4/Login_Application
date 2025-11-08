@@ -1,4 +1,4 @@
-import React, { useActionState, useState } from 'react';
+import { useActionState, useState } from 'react';
 import UserLogin from './UserLogin';
 import Input from '../../Component/Fields/Input';
 import { InputPasswordField } from '../../Component/Fields/InputPasswordField';
@@ -14,9 +14,9 @@ function SignUp() {
   const [dob, setDOB] = useState<Date | null>(null);
   const [gender , setGender] = useState("");
 
-  const { data, error:resError, loading, PostData:postData } = usePostAPIData('/signup');
+  const { error:resError, PostData:postData } = usePostAPIData('/signup');
 
-  const handleInputForms = async (prevState:any,formData: any) => {
+  const handleInputForms = async (_prevState:any,formData: any) => {
     const fName = formData.get('Fname');
     const lName = formData.get('Lname');
     const email = formData.get('email');
