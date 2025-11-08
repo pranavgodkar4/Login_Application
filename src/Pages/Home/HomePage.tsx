@@ -1,5 +1,3 @@
-import React from 'react';
-
 function HomePage() {
     console.log("Home");
     console.log("token - " +localStorage.getItem("token"));
